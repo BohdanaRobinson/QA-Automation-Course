@@ -104,3 +104,5 @@ let ufcFighter3 = {
 };
 console.log(ufcFighter3);
 console.log(ufcFighter3.country3); // Accessing a key in an object
+
+// Test2
