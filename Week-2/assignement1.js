@@ -43,3 +43,17 @@ console.log(55 > 46 || 44 > 67);
 let isSnowing = false;
 isSnowing = !false;
 console.log("Is it snowing?", isSnowing);
+
+//4. Truthy vs Falsy
+if ("") {
+  console.log("Falsy value detected"); // falsy
+}
+
+//4.2
+if ("Jaycee Boy") {
+  console.log("Truthy value detected"); // Truthy
+}
+
+//4.3
+let side = "Buy" || "Sell";
+console.log(side);
