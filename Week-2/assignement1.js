@@ -30,5 +30,16 @@ console.log(6 < 9);
 //2.3.
 console.log(23 !== 6);
 
-console.log(5 !== 5); //false
-console.log(5 !== 8); //true
+//Part3: Logical Operators
+
+console.log(2 < 5 && 9 > 0); // true
+console.log(1 >= 2 && 7 < 8); // false
+
+//3.2
+console.log(49 > 26 || 67 > 99);
+console.log(55 > 46 || 44 > 67);
+
+//3.3
+let isSnowing = false;
+isSnowing = !false;
+console.log("Is it snowing?", isSnowing);
