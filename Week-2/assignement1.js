@@ -18,3 +18,11 @@ console.log(stockPrice);
 
 //1.4. create a number and raise it to thr power of 3
 console.log(3 ** 3);
+
+//Part 2: Comparison Operators
+
+console.log(22 === "22");
+
+//2.2.
+console.log(6 > 9);
+console.log(6 < 9);
