@@ -26,3 +26,9 @@ console.log(22 === "22");
 //2.2.
 console.log(6 > 9);
 console.log(6 < 9);
+
+//2.3.
+console.log(23 !== 6);
+
+console.log(5 !== 5); //false
+console.log(5 !== 8); //true
