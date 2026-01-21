@@ -57,3 +57,8 @@ if ("Jaycee Boy") {
 //4.3
 let side = "Buy" || "Sell";
 console.log(side);
+
+// Challenge
+
+let userName = "Jaycee";
+console.log((userName && "Welcome back") || "Please sign up");
