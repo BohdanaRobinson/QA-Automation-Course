@@ -1,10 +1,11 @@
 // 1. Create two numbers and:
 let number = 20;
+let numberD = 5;
 console.log(number + 5);
 
-console.log(20 - 10);
+console.log(20 - 5);
 console.log(5 * 5);
-console.log(20 / 2);
+console.log(20 / 5);
 
 // 1.2 Create a number and
 let stockPrice = 200;
