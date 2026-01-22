@@ -47,3 +47,36 @@ console.log(score);
 const fruits = ["apple", "Banana"];
 fruits.push("orange");
 console.log(fruits);
+
+//2.
+let a = 7;
+let b = 3;
+console.log(a + b);
+console.log(a - b);
+console.log(a / b);
+console.log(a % b);
+console.log(a * b);
+
+if (a >= b) {
+  console.log("True");
+} else {
+  console.log("False");
+}
+
+//3
+let age2 = 67;
+if (age2 >= 18) {
+  console.log("You are an adult");
+} else {
+  console.log("You are a minor");
+}
+
+//4.
+let num = 10;
+if (num >= 10) {
+  console.log("Even and big");
+} else if ((num = 10)) {
+  console.log("Even");
+} else {
+  console.log("Odd");
+}
