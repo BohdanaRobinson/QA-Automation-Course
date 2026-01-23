@@ -36,3 +36,14 @@ console.log(numbers);
 // slice (1 is index here - included, 4 is also index here - excluded )
 const slicedNumbersArray = numbers.slice(1, 4);
 console.log(slicedNumbersArray);
+
+const myFavoriteColors = ["green", "yellow", "blue", "red", "white"];
+const mySlicedFavoriteColors = myFavoriteColors.slice(1, 4);
+console.log(mySlicedFavoriteColors);
+
+// 1.
+const originalFruits = ["Kiwi", "Banana", "Cherry"];
+const richardFruits = [...originalFruits];
+
+console.log(originalFruits);
+console.log(richardFruits);
