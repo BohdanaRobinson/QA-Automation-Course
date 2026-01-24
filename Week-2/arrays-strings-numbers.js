@@ -54,6 +54,25 @@ console.log(carBrandString);
 
 console.log(Array.isArray("car brands")); //Check if the car brands variable is an array: false
 
-const newWord = "ENGINE";
+const newWord = "ENGINE"; // Convert the word "ENGINE" into an array of characters
 const newArray = Array.from(newWord);
 console.log(newArray);
+
+/// PART 2: STRING MANIPULATION
+//let newString = "       Good Boy     ";
+console.log(newString.trim()); //Remove extra spaces from the string
+
+console.log(newString.length); //Log its length
+
+// Task 7: Case & Access
+console.log(newString.toUpperCase()); //Convert the string to uppercase
+console.log(newString.toLowerCase()); // Convert the string to lowercase
+
+// Task 8: Slice & Replace
+
+const word = "TestCase";
+console.log(word.slice(0, 4)); //1. Extract the **first word**
+console.log(word.slice(4)); //2. Extract the **last word**
+
+let mydog = "Jaycee is a good boy";
+console.log(mydog.replace("good", "bad"));
