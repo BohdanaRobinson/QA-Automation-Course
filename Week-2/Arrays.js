@@ -22,7 +22,7 @@ console.log(fruits1);
 
 console.log(fruits1.length);
 
-//////////////Metoda that return new array
+//////////////Metods that return new array
 
 //5. concat() - merges array into one array
 const fruitsTwo = ["Apple", "Banana", "Orange"];
@@ -51,6 +51,7 @@ const myFavoriteColors = ["green", "yellow", "blue", "red", "white"];
 const mySlicedFavoriteColors = myFavoriteColors.slice(1, 4);
 console.log(mySlicedFavoriteColors);
 
+///////-----------------Methods that chsnge the original array----------
 // 1. Copying an array
 const originalFruits = ["Kiwi", "Banana", "Cherry"];
 const richardFruits = [...originalFruits];
@@ -93,9 +94,29 @@ const stringArrays = ["a", "c", "z", "b"];
 stringArrays.sort();
 
 //// --------Methods that find an element in the array ////
-//1. .indexOf() - Returns the index of a specifix element inside an array
+//1. .indexOf() - Returns the first match  index of a specifix element inside an array
 // ALways retirns the first match
 
 const akbarAliFaboriteColors = ["Black", "White", "Red", " Blue"];
 console.log(akbarAliFaboriteColors.indexOf("Red"));
-//4 .includes() - checks if an element exists inside an array. it will always return b
+
+// 2.  .lastIndexOf  --- returns the last index of the value
+
+console.log(akbarAliFaboriteColors.lastIndexOf("Blue"));
+
+//3.  .at() --- gets an element at a specific position
+
+console.log(akbarAliFaboriteColors.at(1));
+
+//4 .includes() - checks if an element exists inside an array. it will always return boolean value true or false
+// it's case sensitive
+const trainsLane = ["F", "E", "B", "D"];
+console.log(trainsLane.includes("O")); // false
+
+////////--------- The joiners & Converters//////////
+
+///1.    .join() - converts array into a string with a specified seperator
+
+const danasFruitsArray = ["Apple", "Banana", "Kiwi"];
+const danasfruitsString = danasFruitsArray.join();
+console.log(danasfruitsString);
