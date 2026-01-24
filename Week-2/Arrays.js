@@ -1,16 +1,26 @@
+//1 . Array - is a data type that can store differnt elements.
+
+let fruits4 = ["Apple", "Orange", "Banana"];
+console.log(fruits4);
+
+//2. Accessing Array Elements
+
+console.log(fruits4[0]); // Output Apple
+console.log(fruits4[1]); // -> Orange
+
 //3. Updating array elements
 
-let fruits = ["Apple", "Orange", "Banana", "Kiwi"];
+let fruits1 = ["Apple", "Orange", "Banana", "Kiwi"];
 
-fruits[1] = "Mango";
-console.log(fruits);
+fruits1[1] = "Mango";
+console.log(fruits1);
 
-fruits[3] = "Srawberry";
-console.log(fruits);
+fruits1[3] = "Srawberry";
+console.log(fruits1);
 
 //4.  Lenght - returns how many elements inside in array
 
-console.log(fruits.length);
+console.log(fruits1.length);
 
 //////////////Metoda that return new array
 
@@ -41,9 +51,51 @@ const myFavoriteColors = ["green", "yellow", "blue", "red", "white"];
 const mySlicedFavoriteColors = myFavoriteColors.slice(1, 4);
 console.log(mySlicedFavoriteColors);
 
-// 1.
+// 1. Copying an array
 const originalFruits = ["Kiwi", "Banana", "Cherry"];
 const richardFruits = [...originalFruits];
 
 console.log(originalFruits);
 console.log(richardFruits);
+
+// 2. push () - adds a new element at the end of any array
+console.log(originalFruits);
+richardFruits.push("Coconut");
+console.log(richardFruits);
+
+//3. pop() - removes the last element of the arrau\y
+
+richardFruits.pop();
+console.log(richardFruits);
+
+//4. .unshift() - add an element at the beginning of an array
+richardFruits.unshift("Grapes");
+console.log(richardFruits);
+
+//5. .shift() - removes the first element from an array
+console.log(originalFruits);
+richardFruits.shift();
+console.log(richardFruits);
+
+//6.  .reverse() an array
+
+console.log(originalFruits);
+console.log(richardFruits.reverse());
+
+//7. .sort() - sorts the array ---> commonly used with numbers
+
+const newNumbers = [3, 6, 8, 15, 1, 77, 32]; // very disorganized
+newNumbers.sort((a, b) => a - b); // New sorted numbers
+
+console.log(newNumbers);
+
+const stringArrays = ["a", "c", "z", "b"];
+stringArrays.sort();
+
+//// --------Methods that find an element in the array ////
+//1. .indexOf() - Returns the index of a specifix element inside an array
+// ALways retirns the first match
+
+const akbarAliFaboriteColors = ["Black", "White", "Red", " Blue"];
+console.log(akbarAliFaboriteColors.indexOf("Red"));
+//4 .includes() - checks if an element exists inside an array. it will always return b
