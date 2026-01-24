@@ -56,3 +56,14 @@ console.log(s.concat(" ", d, " ", l));
 
 // or //
 console.log(s + " " + d + " " + l);
+
+// 10. .indexOf -- returns the position (index) of thr first occurence of a substring.
+
+let mySong = "Jaycee is a good boy";
+console.log(mySong.indexOf("good")); // 12 (includes spaces)
+console.log(mySong.indexOf("bad")); // -1 (cuz bad word does not exist in this string);
+
+//11.  .startsWith() & .endsWith() - checks whether a string starts or ends with a certain substring.
+let fixLogFile = "Todaysfix.log";
+console.log(fixLogFile.startsWith("yesterdays"));
+console.log(fixLogFile.startsWith("todays"));

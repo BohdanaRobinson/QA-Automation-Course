@@ -120,3 +120,17 @@ console.log(trainsLane.includes("O")); // false
 const danasFruitsArray = ["Apple", "Banana", "Kiwi"];
 const danasfruitsString = danasFruitsArray.join();
 console.log(danasfruitsString);
+
+/// 2/ Array.from() --- creates a new array from an iterable data type
+
+const str = "Jaycee";
+const sprt = Array.from(str);
+console.log(sprt);
+
+///3. Array.isArray() ---- checks if a value is array -- boolean true or false
+
+const nameId = [1, 2, 3, 4, 5, 6];
+console.log(Array.isArray(nameId));
+
+const name = "Dana";
+console.log(Array.isArray(name));
