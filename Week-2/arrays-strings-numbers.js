@@ -75,4 +75,28 @@ console.log(word.slice(0, 4)); //1. Extract the **first word**
 console.log(word.slice(4)); //2. Extract the **last word**
 
 let mydog = "Jaycee is a good boy";
-console.log(mydog.replace("good", "bad"));
+console.log(mydog.replace("good", "bad")); //Replace one word with another
+
+// Task 9: Search Methods
+console.log(mydog.includes("car")); // Check if the string includes "car". // false
+console.log(mydog.indexOf("boy")); //Find the position of a word
+
+console.log(mydog.startsWith("Jaycee")); //Check if the string starts with a specific word //true
+console.log(mydog.endsWith("bad")); //Check if the string ends with a specific word // false
+
+//  Task 10: Split & Concat
+
+let myBoy = "Lazy, playful, always hungry, energizer"; // Split the sentence into words
+console.log(myBoy.split(","));
+let personality = "stuborn";
+
+console.log(myBoy.concat(" ", personality)); //Join two strings using a method (not +)
+
+// ✍ Task 11: Template Literals
+
+let carBrandNew = "BMW";
+const carYear = 2010;
+let carAge = 16;
+let sentence = ` I use to have a car of a brand ${carBrandNew}, that car was from ${carYear}, and right now it would be ${carAge} year old car`;
+
+console.log(sentence);
