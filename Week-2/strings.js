@@ -64,6 +64,34 @@ console.log(mySong.indexOf("good")); // 12 (includes spaces)
 console.log(mySong.indexOf("bad")); // -1 (cuz bad word does not exist in this string);
 
 //11.  .startsWith() & .endsWith() - checks whether a string starts or ends with a certain substring.
+// case sensitive
 let fixLogFile = "Todaysfix.log";
-console.log(fixLogFile.startsWith("yesterdays"));
-console.log(fixLogFile.startsWith("todays"));
+console.log(fixLogFile.startsWith("yesterdays")); // false
+console.log(fixLogFile.startsWith("todays")); // false (case sensitive);
+
+// 12.
+//
+
+// Template literals - make working simpler and cleaner
+
+let name1 = "Dana";
+let message = `${name1}, It's time go to sleep`; // must use `` not ""
+
+console.log(message);
+
+// 13. Multi-line Strings - create multi- line strings
+
+let sdlc = `Software Dewelopment Lyfe Cycle is a cycle ,
+trough which a software from  idea
+ becomes a product.`;
+console.log(sdlc);
+
+//14. Expressions Inside templates Literals - perform calculations or function calls directly ${}
+
+let birthDay = 23;
+let birthDayMonth = "February";
+let birthDayYear = 2000;
+
+console.log(
+  `The date of my birth is a combination of ${birthDay} ${birthDayMonth}  ${birthDayYear}. It's my birthday soon. Happy Birthday to Senior Software Engineer`,
+);
