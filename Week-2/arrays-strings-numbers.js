@@ -32,5 +32,28 @@ console.log(carBrand);
 carBrand.reverse(); //Reverse the array
 console.log(carBrand);
 
-carBrand.sort();
+carBrand.sort(); //Sort the array alphabetically
+
 console.log(carBrand);
+
+// Task 4: Finder Methods
+//let carBrand = ["BMW", "Mercedes-Benz", "Porshe", "Toyota", "Dodge"];
+
+const toyotaThere = carBrand.includes("Toyota"); ///Check if "Toyota" exists in the array
+console.log(toyotaThere);
+
+const bmwIndex = carBrand.indexOf("BMW");
+console.log(bmwIndex); // Find the index of "BMW"
+
+const lastIndexCar = carBrand.lastIndexOf("Dodge"); //?// Find the last index of a car brand that appears more than once ?
+console.log(lastIndexCar);
+
+//Task 5: Joiners
+const carBrandString = carBrand.join(","); // Convert the car brands array into a single string
+console.log(carBrandString);
+
+console.log(Array.isArray("car brands")); //Check if the car brands variable is an array: false
+
+const newWord = "ENGINE";
+const newArray = Array.from(newWord);
+console.log(newArray);
