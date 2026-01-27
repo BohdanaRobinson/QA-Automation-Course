@@ -37,3 +37,51 @@ function printNumber(num1, num2) {
   }
 }
 printNumber();
+
+//4. Default parameters
+
+function greetStudent(name = "student") {
+  // if we do name= "student" - we provide default value
+  console.log(`Hello ${name}, welcome to Java Script class!`);
+}
+greetStudent();
+
+//5. return Values
+function addNewNumber(num1, num2) {
+  return num1 + num2;
+}
+
+const functionAddNewNumber = addNewNumber(3, 6);
+console.log(functionAddNewNumber);
+
+// or
+
+function addNewNumber(num1, num2) {
+  const result = num1 + num2;
+  return result;
+}
+
+const functionAddNewNumberTwo = addNewNumber(3, 6);
+console.log(functionAddNewNumberTwo);
+
+//6. Arrow Functions
+
+const greetStudentsTwo = (students) => {
+  console.log(`Hello ${students}, welcome to class!`);
+};
+
+greetStudentsTwo("Dana");
+
+// another
+
+const substractTwoNumbers = (num1, num2) => num1 - num2;
+const resultTwo = substractTwoNumbers(5, 3);
+
+console.log(resultTwo);
+
+const array = ["blue", "red", "green"];
+function generateRandomNumber() {
+  return 2;
+}
+const randomNumber = generateRandomNumber();
+console.log(array[randomNumber]);
