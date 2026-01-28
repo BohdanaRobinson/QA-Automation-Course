@@ -85,3 +85,11 @@ function generateRandomNumber() {
 }
 const randomNumber = generateRandomNumber();
 console.log(array[randomNumber]);
+
+//select command slash
+
+//////////////////////////////////
+function dayGreeting() {
+  console.log("Good morning!");
+}
+dayGreeting();
