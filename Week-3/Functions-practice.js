@@ -9,3 +9,15 @@ console.log(sentence);
 
 let price = 9.99;
 console.log(price);
+
+// ## PART 1: STRING + FUNCTIONS
+
+// ### 🔤 Task 1: Clean & Format Text
+
+function string() {
+  let stringExample = "   Practice    ";
+  return stringExample.trim().toLowerCase();
+}
+let result = string();
+
+console.log(result);
