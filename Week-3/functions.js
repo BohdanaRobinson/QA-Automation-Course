@@ -112,3 +112,9 @@ function printNimber(num1, num2) {
   }
 }
 printNimber(3, 1);
+
+function dayToday(dayIs = "good") {
+  console.log(`Today is ${dayIs} day`);
+}
+dayToday();
+dayToday("weird");
