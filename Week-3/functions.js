@@ -120,5 +120,13 @@ dayToday();
 dayToday("weird");
 
 const myName2 = (name1, name2) => name1 + name2;
-
 console.log("Bohdana", "Robinson");
+////
+
+function generateRandom() {
+  return 2;
+}
+
+const array2 = ["Blue", "green", "Red"];
+const randomNumber2 = generateRandom();
+console.log(array2[randomNumber2]);
