@@ -93,3 +93,8 @@ function dayGreeting() {
   console.log("Good morning!");
 }
 dayGreeting();
+
+function myDog(name) {
+  console.log(`${name} is a good boy`);
+}
+myDog("Jaycee");
