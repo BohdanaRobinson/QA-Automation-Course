@@ -16,3 +16,10 @@ function scope() {
 }
 
 scope();
+
+//////
+function myBoy() {
+  let myBoyName = "Jaycee";
+  console.log(myBoyName);
+}
+myBoy();
