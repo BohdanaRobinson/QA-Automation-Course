@@ -98,3 +98,17 @@ function myDog(name) {
   console.log(`${name} is a good boy`);
 }
 myDog("Jaycee");
+
+function myName(firstName, LastName) {
+  console.log(firstName, LastName);
+}
+myName("Bohdana", "Hoiuk"); // Bohdana Hoiuk
+
+function printNimber(num1, num2) {
+  if (num1 > num2) {
+    console.log("Number is bigger");
+  } else {
+    console.log("Number is smaller");
+  }
+}
+printNimber(3, 1);
