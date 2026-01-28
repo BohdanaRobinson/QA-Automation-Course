@@ -118,3 +118,7 @@ function dayToday(dayIs = "good") {
 }
 dayToday();
 dayToday("weird");
+
+const myName2 = (name1, name2) => name1 + name2;
+
+console.log("Bohdana", "Robinson");
