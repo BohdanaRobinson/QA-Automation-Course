@@ -128,4 +128,29 @@ function taskSeventh(num) {
   return Math.ceil(num);
 }
 
-console.log(taskSeventh(8.4));
+console.log(taskSeventh(8.4)); //9
+
+///////////////////////////////////////
+
+// ### ask 8: Price Comparison
+
+// Write a function that:
+
+// 1. Takes two prices
+// 2. Returns:
+//     - `"Prices are equal"`
+//     - `"First is higher"`
+//     - `"Second is higher"`
+
+function tasksEighth(price1, price2) {
+  if (price1 === price2) {
+    return "Prices are equal";
+  } else if (price1 > price2) {
+    return "First is higher";
+  } else if (price1 < price2) {
+    return "Second is higher";
+  }
+}
+console.log(tasksEighth(10, 12));
+console.log(tasksEighth(10, 10));
+console.log(tasksEighth(12, 10));
