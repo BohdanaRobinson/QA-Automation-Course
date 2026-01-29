@@ -37,4 +37,23 @@ function taskOne(str) {
   let upperCase = noSpaces.toUpperCase();
   return upperCase;
 }
-console.log(taskOne("     Jaycee is a good boy"));
+console.log(taskOne("     Jaycee is a good boy")); // JAYCEE IS A GOOD BOY
+
+// Write a function that:
+// Takes one number
+// If the number is negative → return "Negative"
+// If the number is zero → return "Zero"
+// If the number is positive → return "Positive"
+// 📌 Must use return in each case
+// 📌 No console.log inside the function
+
+function taskTwo(num) {
+  if (num < 0) {
+    return "Negative";
+  } else if (num === 0) {
+    return "Zero";
+  } else if (num > 0) {
+    return "Positive";
+  }
+}
+console.log(taskTwo(10));
