@@ -35,7 +35,7 @@ function secondTask(str2) {
   return { first, second };
 }
 console.log(secondTask("It's so cool and convenient to own a car")); //{ first: 'I', second: 'r' }
-
+////////////////////////////////////////////////////////////
 // ### 🔤 Task 3: Word Counter
 
 // Write a function that:
@@ -69,6 +69,7 @@ console.log(thirdTask(sentence)); //9
 // 📌 Case-insensitive comparison required.
 
 function taskFourth(carBrands) {
+  // ["Bmw", "Nissan", "Mercedez", "Toyota"];
   let brandName = carBrands.includes("Nissan");
   if (brandName) {
     return "Brand exists";
@@ -76,4 +77,55 @@ function taskFourth(carBrands) {
     return "Brand not found";
   }
 }
-console.log(taskFourth(carBrands));
+console.log(taskFourth(carBrands)); //Brand exists
+
+////////////////////////////////
+// ### Task 5: Get Last Brand
+
+// Write a function that:
+
+// 1. Takes an array of car brands
+// 2. Returns the **last brand** using an array method
+
+function taskFifth(carBrands) {
+  //// ["Bmw", "Nissan", "Mercedez", "Toyota"];
+  return carBrands[3];
+}
+console.log(taskFifth(carBrands)); // toyota
+
+///////////////////////////////////////////////
+// ### 🚗 Task 6: Format Brands List
+
+// Write a function that:
+
+// 1. Takes an array of car brands
+// 2. Returns a **single string** of brands separated by commas
+
+function tasksSixth(carBrands) {
+  //["Bmw", "Nissan", "Mercedez", "Toyota"];
+  return carBrands.join(", ");
+}
+console.log(tasksSixth(carBrands)); // Bmw,Nissan,Mercedez,Toyota
+
+/////////////////////////////////////////////////////////
+
+// ### Task 7: Safe Rounding
+
+// Write a function that:
+
+// 1. Takes a number
+// 2. If the value is not a number → return `"Invalid number"`
+// 3. Otherwise:
+//     - Round it normally
+//     - Return the result
+
+function taskSeventh(num) {
+  if (isNaN(num)) {
+    return "Invalid Number";
+  } else {
+    return Math.ceil(num);
+  }
+  return Math.ceil(num);
+}
+
+console.log(taskSeventh(8.4));
