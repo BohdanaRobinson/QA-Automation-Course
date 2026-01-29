@@ -98,3 +98,59 @@ function taskFifth(carBrandsArray) {
   return console.log(carBrandsArray[3]);
 }
 taskFifth(["Bmw", "Nissan", "Mercedez", "Toyota"]);
+
+// ### 🚗 Task 6: Format Brands List
+
+// Write a function that:
+
+// 1. Takes an array of car brands
+// 2. Returns a **single string** of brands separated by commas
+
+function tasksSixth(carBrandArray) {
+  return console.log(carBrandArray.join(","));
+}
+tasksSixth(["Bmw", "Nissan", "Mercedez", "Toyota"]);
+
+// ### Task 7: Safe Rounding
+
+// Write a function that:
+
+// 1. Takes a number
+// 2. If the value is not a number → return `"Invalid number"`
+// 3. Otherwise:
+//     - Round it normally
+//     - Return the result
+
+function taskSeventh(number) {
+  if (isNaN(number)) {
+    console.log("Invalid Number");
+  } else {
+    console.log(Math.ceil(number));
+  }
+  return console.log(Math.ceil(number));
+}
+
+taskSeventh(8.4);
+
+// ### ask 8: Price Comparison
+
+// Write a function that:
+
+// 1. Takes two prices
+// 2. Returns:
+//     - `"Prices are equal"`
+//     - `"First is higher"`
+//     - `"Second is higher"`
+
+function tasksEighth(price1, price2) {
+  if (price1 === price2) {
+    return console.log("Prices are equal");
+  } else if (price1 > price2) {
+    return console.log("First is higher");
+  } else if (price1 < price2) {
+    return console.log("Second is higher");
+  }
+}
+tasksEighth(10, 12);
+tasksEighth(10, 10);
+tasksEighth(12, 10);
