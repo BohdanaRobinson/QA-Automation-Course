@@ -61,3 +61,40 @@ function thirdTask(sentence) {
 }
 
 thirdTask("Jaycee is a good Boy");
+
+//## PART 2: ARRAY + FUNCTIONS
+
+// ### 🚗 Task 4: Brand Checker
+
+// Write a function that:
+
+// 1. Takes an array of car brands
+// 2. Takes a brand name
+// 3. Returns:
+//     - `"Brand exists"` if found
+//     - `"Brand not found"` otherwise
+
+// 📌 Case-insensitive comparison required.
+
+function taskFourth(carBrandArray) {
+  let brandName = carBrandArray.includes("Nissan");
+  if (brandName) {
+    return console.log("Brand exists");
+  } else {
+    console.log("Brand not found");
+  }
+}
+
+taskFourth(["Bmw", "Nissan", "Mercedez", "Toyota"]);
+
+// ### Task 5: Get Last Brand
+
+// Write a function that:
+
+// 1. Takes an array of car brands
+// 2. Returns the **last brand** using an array method
+
+function taskFifth(carBrandsArray) {
+  return console.log(carBrandsArray[3]);
+}
+taskFifth(["Bmw", "Nissan", "Mercedez", "Toyota"]);
