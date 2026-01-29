@@ -3,11 +3,8 @@ let numbers = [4, 55, 85, 25];
 let sentence = "It's so cool and convenient to own a car";
 let price = 9.99;
 
-// ## PART 1: STRING + FUNCTIONS
-
 // ### 🔤 Task 1: Clean & Format Text
 // Write a function that:
-
 // 1. Takes a string
 // 2. Removes extra spaces at the start and end
 // 3. Converts the string to lowercase
@@ -18,13 +15,10 @@ function firstTasks(str) {
   let lowerCase = noSpaces.toLowerCase();
   return lowerCase;
 }
-
-console.log(firstTasks("  It's so cool and convenient to own a car  "));
+console.log(firstTasks("  It's so cool and convenient to own a car  ")); // it's so cool and convenient to own a car
 
 // ### 🔤 Task 2: First & Last Character
-
 // Write a function that:
-
 // 1. Takes a string
 // 2. Returns:
 //     - The first character
@@ -35,100 +29,92 @@ function secondTask(str2) {
   const second = str2.at(-1);
   return { first, second };
 }
-secondTask("It's so cool and convenient to own a car");
-
+console.log(secondTask("It's so cool and convenient to own a car")); //{ first: 'I', second: 'r' }
+////////////////////////////////////////////////////////////
 // ### 🔤 Task 3: Word Counter
-
 // Write a function that:
-
 // 1. Takes a sentence
 // 2. Splits it into words
 // 3. Returns the number of words
-
 // 📌 Use string and array methods only.
 
 function thirdTask(sentence) {
+  //let sentence = "It's so cool and convenient to own a car";
   let splitIntoWords = sentence.split(" ");
   let countOfWords = splitIntoWords.length;
-  return console.log(countOfWords);
+  return countOfWords;
 }
-
-thirdTask("Jaycee is a good Boy");
-
-//## PART 2: ARRAY + FUNCTIONS
+console.log(thirdTask(sentence)); //9
+/////////////////////////////////////////
 
 // ### 🚗 Task 4: Brand Checker
-
 // Write a function that:
-
 // 1. Takes an array of car brands
 // 2. Takes a brand name
 // 3. Returns:
 //     - `"Brand exists"` if found
 //     - `"Brand not found"` otherwise
-
 // 📌 Case-insensitive comparison required.
 
-function taskFourth(carBrandArray) {
-  let brandName = carBrandArray.includes("Nissan");
+function taskFourth(carBrands) {
+  // ["Bmw", "Nissan", "Mercedez", "Toyota"];
+  let brandName = carBrands.includes("Nissan");
   if (brandName) {
     return "Brand exists";
   } else {
     return "Brand not found";
   }
 }
-console.log(taskFourth(car));
-taskFourth(["Bmw", "Nissan", "Mercedez", "Toyota"]);
+console.log(taskFourth(carBrands)); //Brand exists
 
+////////////////////////////////
 // ### Task 5: Get Last Brand
-
 // Write a function that:
-
 // 1. Takes an array of car brands
 // 2. Returns the **last brand** using an array method
 
-function taskFifth(carBrandsArray) {
-  return console.log(carBrandsArray[3]);
+function taskFifth(carBrands) {
+  //// ["Bmw", "Nissan", "Mercedez", "Toyota"];
+  return carBrands[3];
 }
-taskFifth(["Bmw", "Nissan", "Mercedez", "Toyota"]);
+console.log(taskFifth(carBrands)); // toyota
 
+///////////////////////////////////////////////
 // ### 🚗 Task 6: Format Brands List
-
 // Write a function that:
-
 // 1. Takes an array of car brands
 // 2. Returns a **single string** of brands separated by commas
 
-function tasksSixth(carBrandArray) {
-  return console.log(carBrandArray.join(","));
+function tasksSixth(carBrands) {
+  //["Bmw", "Nissan", "Mercedez", "Toyota"];
+  return carBrands.join(", ");
 }
-tasksSixth(["Bmw", "Nissan", "Mercedez", "Toyota"]);
+console.log(tasksSixth(carBrands)); // Bmw,Nissan,Mercedez,Toyota
+
+/////////////////////////////////////////////////////////
 
 // ### Task 7: Safe Rounding
-
 // Write a function that:
-
 // 1. Takes a number
 // 2. If the value is not a number → return `"Invalid number"`
 // 3. Otherwise:
 //     - Round it normally
 //     - Return the result
 
-function taskSeventh(number) {
-  if (isNaN(number)) {
-    console.log("Invalid Number");
+function taskSeventh(num) {
+  if (isNaN(num)) {
+    return "Invalid Number";
   } else {
-    console.log(Math.ceil(number));
+    return Math.ceil(num);
   }
-  return console.log(Math.ceil(number));
+  return Math.ceil(num);
 }
 
-taskSeventh(8.4);
+console.log(taskSeventh(8.4)); //9
 
+///////////////////////////////////////
 // ### ask 8: Price Comparison
-
 // Write a function that:
-
 // 1. Takes two prices
 // 2. Returns:
 //     - `"Prices are equal"`
@@ -137,35 +123,30 @@ taskSeventh(8.4);
 
 function tasksEighth(price1, price2) {
   if (price1 === price2) {
-    return console.log("Prices are equal");
+    return "Prices are equal";
   } else if (price1 > price2) {
-    return console.log("First is higher");
+    return "First is higher";
   } else if (price1 < price2) {
-    return console.log("Second is higher");
+    return "Second is higher";
   }
 }
-tasksEighth(10, 12);
-tasksEighth(10, 10);
-tasksEighth(12, 10);
+console.log(tasksEighth(10, 12));
+console.log(tasksEighth(10, 10));
+console.log(tasksEighth(12, 10));
 
-// ### Task 9: Random Whole Number
+////////////////////////////////////////////////
 
+//Task 9: Random Whole Number
 // Write a function that:
-
 // 1. Returns a random **whole number between 1 and 10**
 // 2. Explain the formula in comments
 
-function taskNinth(randomNumber1, randomNumber2) {
-  let randomNumber =
-    Math.floor(Math.random() * (randomNumber1 - randomNumber2 + 1)) +
-    randomNumber2;
-  return console.log(randomNumber);
+function taskNinth(randomNum1, randomNum2) {
+  return Math.floor(Math.random() * (randomNum1 - randomNum2 + 1)) + randomNum2;
 }
+console.log(taskNinth(10, 1)); // 2
 
-taskNinth(10, 1); // 2
-
-// ## PART 4: CONDITIONAL THINKING
-
+////////////////////////////////////////
 // ### 🧠 Task 10: Budget Check
 
 // Write a function that:
@@ -178,10 +159,40 @@ taskNinth(10, 1); // 2
 //     - `"Over budget"`
 //     - `"Invalid input"`
 
-// function taskTenth(carPrice, userBudget) {
-// if (carPrice > 0) || (isNaN(carPrice) || ){
-//   return console.log("Within budget");
-// }
-// }
+function taskTenth(carPx, userBudget) {
+  if (carPx <= 0 || userBudget <= 0) {
+    return "Invalid input";
+  } else if (carPx <= userBudget) {
+    return "Within budget";
+  } else {
+    return "Over budget";
+  }
+}
+console.log(taskTenth(9.0, 8.0));
 
-// taskTenth(10.000, 8.000);
+/////////////////////////////////////////////
+// ## FINAL MINI-CHALLENGE
+
+// ### 🏁 Task 11: Simple Car Deal Summary
+
+// Write a function that:
+
+// 1. Takes:
+//     - car brand
+//     - car price
+//     - user budget
+// 2. Cleans the brand name
+// 3. Rounds the price
+// 4. Checks if the car is affordable
+// 5. Returns a sentence using **template literals**
+
+function challenge(brand, carPx, budget) {
+  let cleanBrand = brand.trim();
+  let roundedPx = Math.ceil(carPx);
+  if (roundedPx <= budget) {
+    return `${cleanBrand} costs ${roundedPx} and it is within my budget`;
+  } else {
+    return `${cleanBrand} costs ${roundedPx} and it is NOT within my budget`;
+  }
+}
+console.log(challenge(" BMW ", 1978.23, 255.0)); //BMW costs 1979 and it is NOT within my budget
