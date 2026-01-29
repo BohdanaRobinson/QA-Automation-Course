@@ -18,5 +18,20 @@ function firstTasks(str) {
   let lowerCase = noSpaces.toLowerCase();
   return lowerCase;
 }
+console.log(firstTasks("  It's so cool and convenient to own a car  ")); // it's so cool and convenient to own a car
 
-console.log(firstTasks("  It's so cool and convenient to own a car  "));
+// ### 🔤 Task 2: First & Last Character
+
+// Write a function that:
+
+// 1. Takes a string
+// 2. Returns:
+//     - The first character
+//     - The last character
+
+function secondTask(str2) {
+  const first = str2[0];
+  const second = str2.at(-1);
+  return { first, second };
+}
+console.log(secondTask("It's so cool and convenient to own a car"));
