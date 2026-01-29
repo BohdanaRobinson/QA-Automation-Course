@@ -34,4 +34,46 @@ function secondTask(str2) {
   const second = str2.at(-1);
   return { first, second };
 }
-console.log(secondTask("It's so cool and convenient to own a car"));
+console.log(secondTask("It's so cool and convenient to own a car")); //{ first: 'I', second: 'r' }
+
+// ### 🔤 Task 3: Word Counter
+
+// Write a function that:
+
+// 1. Takes a sentence
+// 2. Splits it into words
+// 3. Returns the number of words
+
+// 📌 Use string and array methods only.
+
+function thirdTask(sentence) {
+  //let sentence = "It's so cool and convenient to own a car";
+  let splitIntoWords = sentence.split(" ");
+  let countOfWords = splitIntoWords.length;
+  return countOfWords;
+}
+console.log(thirdTask(sentence)); //9
+/////////////////////////////////////////
+//## PART 2: ARRAY + FUNCTIONS
+
+// ### 🚗 Task 4: Brand Checker
+
+// Write a function that:
+
+// 1. Takes an array of car brands
+// 2. Takes a brand name
+// 3. Returns:
+//     - `"Brand exists"` if found
+//     - `"Brand not found"` otherwise
+
+// 📌 Case-insensitive comparison required.
+
+function taskFourth(carBrands) {
+  let brandName = carBrands.includes("Nissan");
+  if (brandName) {
+    return "Brand exists";
+  } else {
+    return "Brand not found";
+  }
+}
+console.log(taskFourth(carBrands));
