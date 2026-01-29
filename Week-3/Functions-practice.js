@@ -1,11 +1,7 @@
 let carBrands = ["Bmw", "Nissan", "Mercedez", "Toyota"];
-//console.log(carBrands);
 let numbers = [4, 55, 85, 25];
-//console.log(numbers);
 let sentence = "It's so cool and convenient to own a car";
-//console.log(sentence);
 let price = 9.99;
-//console.log(price);
 
 // ## PART 1: STRING + FUNCTIONS
 
@@ -20,10 +16,10 @@ let price = 9.99;
 function firstTasks(str) {
   let noSpaces = str.trim();
   let lowerCase = noSpaces.toLowerCase();
-  return console.log(lowerCase);
+  return lowerCase;
 }
 
-firstTasks("  It's so cool and convenient to own a car  ");
+console.log(firstTasks("  It's so cool and convenient to own a car  "));
 
 // ### 🔤 Task 2: First & Last Character
 
@@ -36,11 +32,8 @@ firstTasks("  It's so cool and convenient to own a car  ");
 
 function secondTask(str2) {
   const first = str2[0];
-  const second = str2[str2.length - 1];
-  return {
-    first: console.log(first),
-    second: console.log(second),
-  };
+  const second = str2.at(-1);
+  return { first, second };
 }
 secondTask("It's so cool and convenient to own a car");
 
@@ -79,12 +72,12 @@ thirdTask("Jaycee is a good Boy");
 function taskFourth(carBrandArray) {
   let brandName = carBrandArray.includes("Nissan");
   if (brandName) {
-    return console.log("Brand exists");
+    return "Brand exists";
   } else {
-    console.log("Brand not found");
+    return "Brand not found";
   }
 }
-
+console.log(taskFourth(car));
 taskFourth(["Bmw", "Nissan", "Mercedez", "Toyota"]);
 
 // ### Task 5: Get Last Brand
@@ -154,3 +147,41 @@ function tasksEighth(price1, price2) {
 tasksEighth(10, 12);
 tasksEighth(10, 10);
 tasksEighth(12, 10);
+
+// ### Task 9: Random Whole Number
+
+// Write a function that:
+
+// 1. Returns a random **whole number between 1 and 10**
+// 2. Explain the formula in comments
+
+function taskNinth(randomNumber1, randomNumber2) {
+  let randomNumber =
+    Math.floor(Math.random() * (randomNumber1 - randomNumber2 + 1)) +
+    randomNumber2;
+  return console.log(randomNumber);
+}
+
+taskNinth(10, 1); // 2
+
+// ## PART 4: CONDITIONAL THINKING
+
+// ### 🧠 Task 10: Budget Check
+
+// Write a function that:
+
+// 1. Takes:
+//     - car price
+//     - user budget
+// 2. Returns:
+//     - `"Within budget"`
+//     - `"Over budget"`
+//     - `"Invalid input"`
+
+// function taskTenth(carPrice, userBudget) {
+// if (carPrice > 0) || (isNaN(carPrice) || ){
+//   return console.log("Within budget");
+// }
+// }
+
+// taskTenth(10.000, 8.000);

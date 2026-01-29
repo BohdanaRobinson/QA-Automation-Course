@@ -169,3 +169,30 @@ function taskTenth(carPx, userBudget) {
   }
 }
 console.log(taskTenth(9.0, 8.0));
+
+/////////////////////////////////////////////
+// ## FINAL MINI-CHALLENGE
+
+// ### 🏁 Task 11: Simple Car Deal Summary
+
+// Write a function that:
+
+// 1. Takes:
+//     - car brand
+//     - car price
+//     - user budget
+// 2. Cleans the brand name
+// 3. Rounds the price
+// 4. Checks if the car is affordable
+// 5. Returns a sentence using **template literals**
+
+function challenge(brand, carPx, budget) {
+  let cleanBrand = brand.trim();
+  let roundedPx = Math.ceil(carPx);
+  if (roundedPx <= budget) {
+    return `${cleanBrand} costs ${roundedPx} and it is within my budget`;
+  } else {
+    return `${cleanBrand} costs ${roundedPx} and it is NOT within my budget`;
+  }
+}
+console.log(challenge(" BMW ", 1978.23, 255.0)); //BMW costs 1979 and it is NOT within my budget
