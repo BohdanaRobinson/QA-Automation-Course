@@ -3,11 +3,8 @@ let numbers = [4, 55, 85, 25];
 let sentence = "It's so cool and convenient to own a car";
 let price = 9.99;
 
-// ## PART 1: STRING + FUNCTIONS
-
 // ### 🔤 Task 1: Clean & Format Text
 // Write a function that:
-
 // 1. Takes a string
 // 2. Removes extra spaces at the start and end
 // 3. Converts the string to lowercase
@@ -21,9 +18,7 @@ function firstTasks(str) {
 console.log(firstTasks("  It's so cool and convenient to own a car  ")); // it's so cool and convenient to own a car
 
 // ### 🔤 Task 2: First & Last Character
-
 // Write a function that:
-
 // 1. Takes a string
 // 2. Returns:
 //     - The first character
@@ -37,13 +32,10 @@ function secondTask(str2) {
 console.log(secondTask("It's so cool and convenient to own a car")); //{ first: 'I', second: 'r' }
 ////////////////////////////////////////////////////////////
 // ### 🔤 Task 3: Word Counter
-
 // Write a function that:
-
 // 1. Takes a sentence
 // 2. Splits it into words
 // 3. Returns the number of words
-
 // 📌 Use string and array methods only.
 
 function thirdTask(sentence) {
@@ -54,18 +46,14 @@ function thirdTask(sentence) {
 }
 console.log(thirdTask(sentence)); //9
 /////////////////////////////////////////
-//## PART 2: ARRAY + FUNCTIONS
 
 // ### 🚗 Task 4: Brand Checker
-
 // Write a function that:
-
 // 1. Takes an array of car brands
 // 2. Takes a brand name
 // 3. Returns:
 //     - `"Brand exists"` if found
 //     - `"Brand not found"` otherwise
-
 // 📌 Case-insensitive comparison required.
 
 function taskFourth(carBrands) {
@@ -81,9 +69,7 @@ console.log(taskFourth(carBrands)); //Brand exists
 
 ////////////////////////////////
 // ### Task 5: Get Last Brand
-
 // Write a function that:
-
 // 1. Takes an array of car brands
 // 2. Returns the **last brand** using an array method
 
@@ -95,9 +81,7 @@ console.log(taskFifth(carBrands)); // toyota
 
 ///////////////////////////////////////////////
 // ### 🚗 Task 6: Format Brands List
-
 // Write a function that:
-
 // 1. Takes an array of car brands
 // 2. Returns a **single string** of brands separated by commas
 
@@ -110,9 +94,7 @@ console.log(tasksSixth(carBrands)); // Bmw,Nissan,Mercedez,Toyota
 /////////////////////////////////////////////////////////
 
 // ### Task 7: Safe Rounding
-
 // Write a function that:
-
 // 1. Takes a number
 // 2. If the value is not a number → return `"Invalid number"`
 // 3. Otherwise:
@@ -131,11 +113,8 @@ function taskSeventh(num) {
 console.log(taskSeventh(8.4)); //9
 
 ///////////////////////////////////////
-
 // ### ask 8: Price Comparison
-
 // Write a function that:
-
 // 1. Takes two prices
 // 2. Returns:
 //     - `"Prices are equal"`
@@ -154,3 +133,39 @@ function tasksEighth(price1, price2) {
 console.log(tasksEighth(10, 12));
 console.log(tasksEighth(10, 10));
 console.log(tasksEighth(12, 10));
+
+////////////////////////////////////////////////
+
+//Task 9: Random Whole Number
+// Write a function that:
+// 1. Returns a random **whole number between 1 and 10**
+// 2. Explain the formula in comments
+
+function taskNinth(randomNum1, randomNum2) {
+  return Math.floor(Math.random() * (randomNum1 - randomNum2 + 1)) + randomNum2;
+}
+console.log(taskNinth(10, 1)); // 2
+
+////////////////////////////////////////
+// ### 🧠 Task 10: Budget Check
+
+// Write a function that:
+
+// 1. Takes:
+//     - car price
+//     - user budget
+// 2. Returns:
+//     - `"Within budget"`
+//     - `"Over budget"`
+//     - `"Invalid input"`
+
+function taskTenth(carPx, userBudget) {
+  if (carPx <= 0 || userBudget <= 0) {
+    return "Invalid input";
+  } else if (carPx <= userBudget) {
+    return "Within budget";
+  } else {
+    return "Over budget";
+  }
+}
+console.log(taskTenth(9.0, 8.0));
