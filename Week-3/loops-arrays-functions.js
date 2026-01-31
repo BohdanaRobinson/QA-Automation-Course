@@ -37,9 +37,27 @@ printFruitsWithIndex(fruits);
 
 function taskThree(fruits) {
   for (let i = 0; i < fruits.length; i++) {
-    console.log(fruits[0]);
-    console.log(fruits[fruits.length - 1]);
+    console.log(fruits[0]); //first element
+    console.log(fruits[fruits.length - 1]); //last
     break;
   }
 }
 taskThree(fruits);
+
+// ### Task 4: Loop Through a String
+// **Use a `while` loop**
+// Write a function that:
+// 1. Takes a **string**
+// 2. Uses a `while` loop
+// 3. Prints **each character** one by one
+
+const str = "SDLC";
+
+function taskFourth(str) {
+  let i = 0;
+  while (i < str.length) {
+    console.log("Character:", str[i]);
+    i++;
+  }
+}
+taskFourth(str);
