@@ -6,7 +6,7 @@ console.log("3");
 console.log("4");
 console.log("5");
 
-for (let i = 1; i <= 5; i++) {
+for (let i = 1; i <= 5; i++) { // i++ increasing by 1
   // we use only let here , we don't use const cuz we reasssign let i later.
   console.log("Count:", i);
 }
