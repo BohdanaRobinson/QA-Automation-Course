@@ -145,6 +145,15 @@ function taskNinth(randomNum1, randomNum2) {
   return Math.floor(Math.random() * (randomNum1 - randomNum2 + 1)) + randomNum2;
 }
 console.log(taskNinth(10, 1)); // 2
+function randomWholeNumber() {
+  // Math.random() gives a number between 0 and 1 (not inclusive of 1)
+  // Multiply by 10 → range 0–9.999
+  // Math.floor → 0–9
+  // +1 → 1–10
+  return Math.floor(Math.random() * 10) + 1;
+}
+
+console.log(randomWholeNumber());
 
 ////////////////////////////////////////
 // ### 🧠 Task 10: Budget Check
