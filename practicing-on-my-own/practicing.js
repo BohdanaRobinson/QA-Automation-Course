@@ -30,53 +30,12 @@ const fighter2 = {
   isFighter: true,
 };
 
-let age = 20; // if 20>18 our condition is true,
+let age = 20;// if 20>18 our condition is true, 
 // then IT WILL PRINT in our terminal that line "Hey you can go to...."
-//but if our condition is not true
-// then we will not see that comment "hey go to...,
+//but if our condition is not true 
+// then we will not see that comment "hey go to..., 
 // it will print us only the value of our vaiable "
 if (age > 18) {
   console.log("Hey, go to school!!!");
 }
 console.log(age);
-
-let score = 1;
-score = 15;
-console.log(score);
-
-const fruits = ["apple", "Banana"];
-fruits.push("orange");
-console.log(fruits);
-
-//2.
-let a = 7;
-let b = 3;
-console.log(a + b);
-console.log(a - b);
-console.log(a / b);
-console.log(a % b);
-console.log(a * b);
-
-if (a >= b) {
-  console.log("True");
-} else {
-  console.log("False");
-}
-
-//3
-let age2 = 67;
-if (age2 >= 18) {
-  console.log("You are an adult");
-} else {
-  console.log("You are a minor");
-}
-
-//4.
-let num = 10;
-if (num >= 10) {
-  console.log("Even and big");
-} else if ((num = 10)) {
-  console.log("Even");
-} else {
-  console.log("Odd");
-}
