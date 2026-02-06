@@ -29,3 +29,22 @@ for (let num of numbers) {
     console.log(num);
   }
 }
+
+//Mini-compare
+
+// for → you control the index (i)
+// for...of → you get the value directly (num)
+
+// Practice 3 — while loop
+// Same idea, different structure.
+// Use a while loop
+// Print numbers greater than 10
+
+let i = 0;
+
+while (i < numbers.length) {
+  if (numbers[i] > 10) {
+    console.log(numbers[i]);
+  }
+  i++;
+}
