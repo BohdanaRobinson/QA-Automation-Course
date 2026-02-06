@@ -48,3 +48,15 @@ while (i < numbers.length) {
   }
   i++;
 }
+
+// Practice 4: for loop
+
+// Task:
+// Given an array of words, print each word that has more than 4 letters.
+
+let array = ["apple", "bat", "orange", "fig", "grape"];
+for (let i = 0; i < array.length; i++) {
+  if (array[i].length > 4) {
+    console.log(array[i]);
+  }
+}
