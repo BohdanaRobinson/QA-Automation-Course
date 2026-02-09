@@ -40,14 +40,14 @@ for (let num of numbers) {
 // Use a while loop
 // Print numbers greater than 10
 
-let i = 0;
+// let i = 0;
 
-while (i < numbers.length) {
-  if (numbers[i] > 10) {
-    console.log(numbers[i]);
-  }
-  i++;
-}
+// while (i < numbers.length) {
+//   if (numbers[i] > 10) {
+//     console.log(numbers[i]);
+//   }
+//   i++;
+// }
 
 // Practice 4: for loop
 
@@ -60,3 +60,40 @@ for (let i = 0; i < array.length; i++) {
     console.log(array[i]);
   }
 }
+
+// do the same task with a for...of loop — no index needed this time.
+// Go ahead and write it using for...of.
+
+for (let fruits of array) {
+  if (fruits.length > 4) {
+    console.log(fruits);
+  }
+}
+
+// let’s do the same task with a while loop.
+
+// Print words with more than 4 letters
+// Use a while loop and a counter variable
+let i = 0;
+while (i < array.length) {
+  // loop through all elements
+  if (array[i].length > 4) {
+    // check word length
+    console.log(array[i]); // print only words longer than 4
+  }
+  i++; // move to next index
+}
+
+// 5. Create a function called printNumbers
+
+// The function should:
+// Use a for loop
+// Print numbers from 1 to 5 (inclusive)
+// Call the function
+
+function printNumbers() {
+  for (let i = 1; i <= 5; i++) {
+    console.log(i);
+  }
+}
+printNumbers();
