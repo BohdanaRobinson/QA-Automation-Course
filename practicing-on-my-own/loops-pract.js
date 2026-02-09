@@ -140,3 +140,26 @@ function printNumbersWhile() {
   }
 }
 printNumbersWhile();
+
+// Task 9: Skip a value (continue)
+
+// This one is important for interviews 👀
+
+// Instructions:
+
+// Write a function skipThree
+
+// Use a for loop
+
+// Print numbers from 1 to 5
+
+// Skip number 3 using continue
+
+function skipThree() {
+  for (let i = 1; i <= 5; i++) {
+    if (i === 3) {
+      continue; // skip number 3
+    }
+    console.log(i); // print only numbers other than 3
+  }
+}
