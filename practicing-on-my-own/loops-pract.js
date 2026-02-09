@@ -108,3 +108,19 @@ function printFruits(fruits) {
   }
 }
 printFruits(fruits);
+
+// Task 7: Add a condition inside the loop
+
+// Use the same fruits array
+// Write a function printLongFruits
+// Print only fruits with more than 5 characters
+// Use a for loop + if condition
+
+function printLongFruits(fruits) {
+  for (let i = 0; i < fruits.length; i++) {
+    if (fruits[i].length > 5) {
+      console.log(fruits[i]);
+    }
+  }
+}
+printLongFruits(fruits);
