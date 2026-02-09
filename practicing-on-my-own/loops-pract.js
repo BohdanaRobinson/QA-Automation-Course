@@ -97,3 +97,14 @@ function printNumbers() {
   }
 }
 printNumbers();
+
+//  TASK 6. Write a function printFruits
+// Use a for loop to print each fruit
+let fruits = ["apple", "banana", "orange"];
+
+function printFruits(fruits) {
+  for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+  }
+}
+printFruits(fruits);
