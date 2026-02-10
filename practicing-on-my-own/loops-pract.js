@@ -163,3 +163,53 @@ function skipThree() {
     console.log(i); // print only numbers other than 3
   }
 }
+
+// Task 10: Count values and return a result
+
+// Instructions:
+// Write a function called countLongFruits
+// It should:
+// Take an array of fruits as input
+// Use a loop to check each fruit
+// Count how many fruits have more than 5 characters
+// Return that number (do not print inside the loop)
+let fruits1 = ["apple", "banana", "orange"];
+
+function countLongFruits(fruits1) {
+  let count = 0;
+  for (let i = 0; i < fruits1.length; i++) {
+    if (fruits1[1].length > 5) {
+      count++;
+    }
+  }
+  return count;
+}
+
+console.log(countLongFruits(fruits1));
+
+// Task 11.
+// Write a function called countEvenNumbers
+
+// It should:
+
+// Take an array of numbers
+
+// Use a for loop
+
+// Count how many numbers are even
+
+// Return the count (do not print inside the loop)
+let numbers2 = [2, 6, 10, 7, 9];
+function countEvenNumbers(numbers2) {
+  let count = 0; // start counting
+
+  for (let i = 0; i < numbers2.length; i++) {
+    if (numbers2[i] % 2 === 0) {
+      // check if even
+      count++; // add 1 to count
+    }
+  }
+
+  return count; // return total **after the loop ends**
+}
+console.log(countEvenNumbers(numbers2));
