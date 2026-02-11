@@ -11,9 +11,9 @@ class Person {
 const alice = new Person("Alice", 25);
 const bob = new Person("Bob", 30);
 
-alice.greet();
+alice.greet(); // or // console.log(alice);
 bob.greet();
-
+///////////////////////////////////////////////////////////////////////////////////////////////////
 const soccerPlayer = {
   name: "Cristiano",
   age: 41,
@@ -45,3 +45,19 @@ const samsungA7 = new Phone("Samsung", "A7", "256GB");
 console.log(samsungA7);
 
 samsungA7.describe();
+
+
+class Student {
+  introduce() {
+    console.log("Hello students")
+  }
+  addition(number1, number2) {
+    return number1 + number2;
+  }
+}
+const student1 = new Student();
+const student2 = new Student();
+
+student1.introduce();
+const value = student1.addition(5,2);
+console.log(value);
