@@ -9,6 +9,15 @@ class SportsCar extends Car {
   }
 }
 
+class SlowCar extends Car {
+  slowcarveryslowdring() {
+    console.log("I'm slow");
+  }
+}
+
+const slooowCar = new SlowCar();
+slooowCar.slowcarveryslowdring();
+
 const ferrari = new SportsCar();
 ferrari.drive(); // Driving
 ferrari.turboBoost(); /// Turbo boost activated
