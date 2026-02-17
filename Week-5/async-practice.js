@@ -111,3 +111,106 @@ checkNumber(10)
   .catch((message) => {
     console.log(message);
   });
+
+// ## Task 4: Async Breakfast
+
+// Create a function:
+
+// ```jsx
+// makeCoffee()
+// ```
+
+// It should:
+
+// - Return a Promise
+// - After 2 seconds, resolve with:
+
+//     ```
+//     "Coffee is ready"
+//     ```
+
+// Then create an **async function**:
+
+// ```jsx
+// startMorning()
+// ```
+
+// It should:
+
+// 1. Await `makeCoffee()`
+// 2. Log the result
+// 3. Log:
+
+//     ```
+//     Morning started
+//     ```
+
+function makeCoffee() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Coffee is ready");
+    }, 2000);
+  });
+}
+
+async function startMorning() {
+  try {
+    const result = await makeCoffee();
+    console.log(result);
+    console.log("Morning started");
+  } catch (error) {
+    console.log("no coffe today");
+  }
+}
+
+startMorning();
+
+// ## Task 5: Async Error Handling
+
+// Create a function:
+
+// ```jsx
+// makeSandwich(hasBread)
+// ```
+
+// It should:
+
+// - Return a Promise
+// - After 1 second:
+//     - Resolve `"Sandwich is ready"` if `hasBread` is true
+//     - Reject `"No bread available"` if false
+
+// Create an async function:
+
+// ```jsx
+// prepareLunch()
+// ```
+
+// Inside it:
+
+// 1. Use `try…catch`
+// 2. Await `makeSandwich(false)`
+// 3. Log the result or error message
+
+function makeSandwich(hasBread) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (hasBread) {
+        resolve("Sandwich is ready");
+      } else {
+        reject("No bread available");
+      }
+    }, 1000);
+  });
+}
+
+async function prepareLunch() {
+  try {
+    const result = await makeSandwich(false);
+    console.log(result);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+prepareLunch();
