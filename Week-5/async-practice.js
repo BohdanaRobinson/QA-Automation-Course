@@ -214,3 +214,70 @@ async function prepareLunch() {
 }
 
 prepareLunch();
+
+// # PROMISE.ALL
+
+// ## Task 6: Parallel Tasks
+
+// Create three functions:
+
+// - `washCar()`
+// - `cleanRoom()`
+// - `doLaundry()`
+
+// Each:
+
+// - Returns a Promise
+// - Resolves after different times:
+//     - Car: 2 seconds
+//     - Room: 1 second
+//     - Laundry: 3 seconds
+// - Logs when finished
+
+// Then:
+
+// 1. Create an async function:
+
+//     ```jsx
+//     startChores()
+//     ```
+
+// 2. Use `Promise.all()` to run all three tasks at once
+// 3. After all finish, log:
+
+//     ```
+//     All choresdone
+//     ```
+
+function washCar() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("Car washed");
+      resolve("Car done");
+    }, 2000);
+  });
+}
+
+function cleanRoom() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("Room cleaned");
+      resolve("Room done");
+    }, 1000);
+  });
+}
+
+function doLaundry() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("Laundry done");
+      resolve("Laundry done");
+    }, 3000);
+  });
+}
+
+async function startChores() {
+  const result = await Promise.all([washCar(), cleanRoom(), doLaundry()]);
+  console.log(result);
+}
+startChores();
