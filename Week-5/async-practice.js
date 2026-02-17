@@ -25,3 +25,42 @@ function prepareGreeting(callback) {
 prepareGreeting(function (message) {
   console.log(message);
 });
+
+// ## Task 2: Create a Promise
+
+// Create a function:
+
+// ```jsx
+// makePizza()
+// ```
+
+// It should:
+
+// 1. Return a new Promise
+// 2. Wait 2 seconds
+// 3. If a variable `pizzaAvailable` is true:
+//     - resolve with `"Pizza is ready"`
+// 4. Otherwise:
+//     - reject with `"No ingredients"`
+
+// Then:
+
+// - Call the function
+// - Use `.then()` and `.catch()` to handle the result
+
+function makePizza() {
+  return new Promise((resolve, reject) => {
+    let pizzaAvailable = true;
+    if (pizzaAvailable) resolve("Pizza is ready");
+    else {
+      reject("No igradients");
+    }
+  }, 2000);
+}
+makePizza()
+  .then((message) => {
+    console.log(message);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
