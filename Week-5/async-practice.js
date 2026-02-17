@@ -281,3 +281,67 @@ async function startChores() {
   console.log(result);
 }
 startChores();
+
+// ## Task 7: Full Dinner Sequence
+
+// Create three promise-based functions:
+
+// - `cookRice()`
+// - `cookChicken()`
+// - `makeSalad()`
+
+// Each:
+
+// - Returns a Promise
+// - Uses different delays
+// - Resolves with a message when done
+
+// Then create:
+
+// ```jsx
+// asyncfunctionmakeDinner()
+// ```
+
+// It should:
+
+// 1. Run all three using `Promise.all()`
+// 2. Log each result
+// 3. Log:
+
+//     ```
+//     Dinner is ready!
+//     ```
+
+function cookRice() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Rice is cooked");
+    }, 1000);
+  });
+}
+
+function cookChicken() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Chicken is ready");
+    }, 3000);
+  });
+}
+
+function makeSalad() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Salad is ready");
+    }, 5000);
+  });
+}
+
+async function makeDinner() {
+  const results = await Promise.all([cookRice(), cookChicken(), makeSalad()]);
+
+  // Log each result
+  results.forEach((result) => console.log(result));
+
+  console.log("Dinner is ready!");
+}
+makeDinner();
