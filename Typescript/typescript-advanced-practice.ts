@@ -73,3 +73,111 @@ async function checkPassword(password: string): Promise<void> {
     console.log(error);
   }
 }
+
+// ## Task 6: Literal Type
+
+// Create a literal type called **OrderStatus**.
+
+// It must allow only the following values:
+
+// - "pending"
+// - "shipped"
+// - "delivered"
+
+// Then create a variable that uses this type.
+
+type OrderStatus = "pending" | "Shipped" | "Delivered";
+let myStatus: OrderStatus = "pending";
+
+// ## Task 7: Union Type
+
+// Create a type alias called **ID**.
+// It must allow:
+// - number
+// - string
+// Then create two variables using this type (one number and one string).
+type Id = number | string;
+let userId: Id = 2;
+let hisUserId: Id = "thatId";
+
+// ## Task 8: Basic Interface
+
+// Create an interface called **User**.
+// It must contain:
+// - id (number)
+// - name (string)
+// - email (string)
+
+// Then create an object using this interface.
+
+interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+
+const myUser: User = {
+  id: 22,
+  name: "Jaycee",
+  email: "jaycee@tojtech.com",
+};
+
+// ## Task 9: Optional Property
+
+// Update the **User** interface.
+
+// Add:
+
+// - phone (optional string)
+
+// Create a new user object that does not include the phone property.
+
+interface User {
+  phone?: string;
+}
+
+const newUser: User = {
+  id: 3,
+  name: "Charles",
+  email: "charles@ufc.com",
+};
+
+// ## Task 10: Extending Interfaces
+
+// Create a new interface called **Admin**.
+
+// Requirements:
+
+// - It must extend the User interface.
+// - It must include a role property that only allows the literal value "admin".
+// - It must include a permissions property (array of strings).
+
+// Then create an Admin object.
+
+interface Admin extends User {
+  role: "admin";
+  permissions: Array<string>;
+}
+const adminObject: Admin = {
+  id: 23,
+  name: "JC",
+  email: "jC@tojtech.com",
+  role: "admin",
+  permissions: ["read", "write", "execute"],
+};
+
+// # PART 5: PICK & OMIT
+
+// ## Task 11: Pick
+
+// Using the User interface, create a new type called **UserPreview*
+// Requirements:
+
+// - It must only include id and name.
+// - Create an object using this type.
+
+type UserPreview = Pick<User, "id" | "name">;
+
+const user1 = { id: 20, name: "Kate" };
+
+console.log(user1);
