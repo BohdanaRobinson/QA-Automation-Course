@@ -181,3 +181,93 @@ type UserPreview = Pick<User, "id" | "name">;
 const user1 = { id: 20, name: "Kate" };
 
 console.log(user1);
+
+// ## Task 12: Omit
+
+// Using the User interface, create a new type called **PublicUser**.
+
+// Requirements:
+
+// - It must exclude the email property.
+// - Create an object using this type.
+
+type PublicUser = Omit<User, "email">;
+
+const publicUser1: PublicUser = {
+  id: 21,
+  name: "Chiko",
+};
+console.log(publicUser1);
+
+// ## Task 13: Tuple
+
+// Create a tuple type called **UserTuple**.
+
+// It must:
+
+// - Have exactly three values.
+// - First value must be a string.
+// - Second value must be a number.
+// - Third value must be a boolean.
+
+// Then create one variable using this tuple type.
+
+let userTuple: [string, number, boolean];
+userTuple: ["JC", 2, "isHappy"];
+
+// ## Task 14: Mini Product System
+
+// ### Step 1
+
+// Create an interface called **Product**.
+
+// It must include:
+
+// - id (use the ID type from Task 7)
+// - name (string)
+// - price (number)
+// - status (use the OrderStatus type)
+// - discount (optional number)
+
+interface Product {
+  id: Id;
+  price: number;
+  status: OrderStatus;
+  discount?: number;
+}
+
+// ### Step 2
+
+// Create a function called **applyDiscount**.
+
+// Requirements:
+
+// - It must accept a Product.
+// - If the product has a discount, reduce the price.
+// - It must return the updated Product.
+// - You must define the return type.
+
+function applyDiscount(product: Product): number {
+  if (product.discount) {
+    return product.price - product.discount;
+  }
+}
+
+// ### Step 3
+
+// Create an async function called **processOrder**.
+
+// Requirements:
+
+// - It must accept a Product.
+// - It must return a Promise of string.
+// - If status is "pending", resolve with "Order processed".
+// - Otherwise, reject with "Order cannot be processed".
+
+async function processOrder(product: Product): Promise<string> {
+  if (product.status === "pending") {
+    return Promise.resolve("Order processed");
+  } else {
+    return Promise.reject("Order cannot be processed");
+  }
+}
